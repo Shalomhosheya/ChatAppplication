@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="648.0" prefWidth="446.0" style="-fx-background-color: #2f3640;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.Ijse.Controllers.ChatFormController">
+   <children>
+      <Pane prefHeight="64.0" prefWidth="446.0" style="-fx-background-color: #2f3640;">
+         <children>
+            <Text fill="#aaae30" layoutX="146.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group Chat" wrappingWidth="191.13671875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="28.0" layoutY="584.0" prefHeight="48.0" prefWidth="327.0" style="-fx-background-color: #192a56;">
+         <children>
+            <TextField fx:id="txtMessage" layoutY="12.0" prefHeight="26.0" prefWidth="267.0" promptText="Type here">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+            </TextField>
+            <ImageView fitHeight="31.0" fitWidth="30.0" layoutX="283.0" layoutY="10.0" onMouseClicked="#attachOn">
+               <image>
+                  <Image url="@../assets/img_2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ScrollPane layoutX="-1.0" layoutY="65.0" prefHeight="509.0" prefWidth="446.0">
+         <content>
+            <VBox fx:id="vBox" prefHeight="516.0" prefWidth="445.0" />
+         </content>
+      </ScrollPane>
+      <Circle fill="#151617" layoutX="404.0" layoutY="608.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="24.0" fitWidth="30.0" layoutX="390.0" layoutY="596.0">
+         <image>
+            <Image url="@../assets/img_1.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="380.0" layoutY="584.0" onMouseClicked="#ActionOn" prefHeight="48.0" prefWidth="48.0" />
+   </children>
+</AnchorPane>
